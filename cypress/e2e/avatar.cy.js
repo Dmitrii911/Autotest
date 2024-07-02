@@ -3,8 +3,8 @@ describe('Проверка авторизации', function () {
     it('Покупка аватара', function () {
          cy.visit('https://pokemonbattle.ru/'); // Зашли на сайт
          
-         cy.get(':nth-child(1) > .auth__input').type('mister.wedil@yandex.ru'); // Найти поле логин и ввести правильный логин
-         cy.get('#password').type('269401demoooN'); // Найти поле пароль и ввести верный пароль
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN'); // Найти поле логин и ввести правильный логин
+         cy.get('#password').type('USER_PASSWORD'); // Найти поле пароль и ввести верный пароль
          cy.get('.auth__button').click(); // Нажал войти
 
          cy.get('.header__btns > :nth-child(4)').click(); // Нажал Магазин
